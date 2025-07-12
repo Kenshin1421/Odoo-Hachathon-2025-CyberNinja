@@ -1,0 +1,241 @@
+.search-filters {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    align-items: flex-end;
+}
+
+.filter-group {
+    flex: 1;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.filter-group input, .filter-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#applyFilters {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#applyFilters:hover {
+    background-color: #45a049;
+}
+
+.results-container {
+    margin-top: 2rem;
+}
+
+.result-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    margin-bottom: 1.5rem; 
+    gap: 1rem; 
+}
+
+.user-info-small {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; 
+}
+
+.user-info-small img {
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4CAF50; 
+}
+
+.user-details h3 {
+    margin: 0 0 0.5rem 0; 
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.user-details p {
+    margin: 0.25rem 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.skills-section {
+    margin: 1.25rem 0; 
+    padding: 0.75rem 0; 
+    border-top: 1px solid #eee; 
+}
+
+.skills-section h4 {
+    margin: 0 0 0.75rem 0; 
+    font-size: 1rem;
+    color: #444;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem; 
+    margin-top: 0.75rem; 
+}
+
+.skill-tag {
+    background-color: #e0f7fa;
+    padding: 0.4rem 0.8rem; 
+    border-radius: 15px; 
+    font-size: 0.9rem;
+    color: #00796b;
+    border: 1px solid #b2ebf2; 
+}
+
+.request-btn {
+    padding: 0.6rem 1.2rem; 
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px; 
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap; 
+    margin-left: auto; 
+}
+
+.request-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-1px); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.user-details p:last-child {
+    color: #4CAF50;
+    font-weight: 500;
+}
+
+/* Profile photo in header */
+header .profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* User info in header */
+header .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Result card layout */
+.result-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+@media (max-width: 600px) {
+    .search-filters {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .result-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .request-btn {
+        align-self: flex-end;
+        margin-top: 0.5rem;
+    }
+    
+    .user-info-small {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .result-card {
+        padding: 1rem;
+    }
+    
+    .user-info-small img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #4CAF50;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    z-index: 1000;
+    animation: fadeIn 0.3s;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.result-card .fa {
+    margin-right: 5px;
+    color: #4CAF50;
+}
