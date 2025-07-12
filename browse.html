@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse - Skill Swap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/browse.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Skill Swap</a></div>
+        <div class="user-info" id="browseUserInfo">
+            <!-- JavaScript -->
+        </div>
+    </header>
+    
+    
+    <main>
+        <h1>Browse Users by Skill</h1>
+        
+        <div class="search-filters">
+            <div class="filter-group">
+                <label for="skillFilter">Skill:</label>
+                <input type="text" id="skillFilter" placeholder="Any skill">
+            </div>
+            
+            <div class="filter-group">
+                <label for="locationFilter">Location:</label>
+                <input type="text" id="locationFilter" placeholder="Any location">
+            </div>
+            
+            <button id="applyFilters">Search</button>
+        </div>
+        
+        <div class="results-container" id="resultsContainer">
+            <!-- Search results will be loaded here -->
+        </div>
+    </main>
+
+    <script src="js/browse.js"></script>
+</body>
+</html>

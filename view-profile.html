@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profile - Skill Swap</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/view-profile.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Skill Swap</a></div>
+        <div class="user-info" id="userInfo">
+            <a href="login.html">Login</a> | <a href="signup.html">Sign Up</a>
+        </div>
+    </header>
+    
+    <main class="profile-container">
+        <h1>User Profile</h1>
+        
+        <div class="profile-content">
+            <div class="profile-picture-section">
+                <div class="profile-photo-container">
+                    <img src="" alt="Profile Photo" id="profilePicture">
+                </div>
+            </div>
+            
+            <div class="profile-info-section">
+                <div class="info-group">
+                    <label>Full Name:</label>
+                    <p id="fullName"></p>
+                </div>
+                
+                <div class="info-group">
+                    <label>Location:</label>
+                    <p id="location"></p>
+                </div>
+                
+                <div class="info-group">
+                    <label>Availability:</label>
+                    <p id="availability"></p>
+                </div>
+                
+                <div class="info-group">
+                    <label>My Skills:</label>
+                    <div id="skills" class="skills-list"></div>
+                </div>
+
+                <div class="info-group">
+                    <label>Skills I Want:</label>
+                    <div id="skillsWanted" class="skills-list"></div>
+                </div>
+                
+                <a href="index.html" class="back-btn">Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/view-profile.js"></script>
+</body>
+</html>

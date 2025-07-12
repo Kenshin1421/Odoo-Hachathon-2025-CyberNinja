@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swap Requests - Skill Swap</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/requests.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Skill Swap</a></div>
+        <div class="user-info" id="requestsUserInfo"></div>
+    </header>
+
+    <main class="requests-container">
+        <h1>Your Swap Requests</h1>
+        
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="received">Received</button>
+            <button class="tab-btn" data-tab="sent">Sent</button>
+            <button class="tab-btn" data-tab="connections">Connections</button>
+            <button class="tab-btn" data-tab="feedback">Feedback Received</button>
+        </div>
+        
+        <div id="receivedRequests" class="tab-content active">
+            <!-- Received requests will load here -->
+        </div>
+        
+        <div id="sentRequests" class="tab-content">
+            <!-- Sent requests will load here -->
+        </div>
+        
+        <div id="connectionsRequests" class="tab-content">
+            <!-- Accepted connections will load here -->
+        </div>
+        
+        <div id="feedbackRequests" class="tab-content">
+            <!-- Feedback received will load here -->
+        </div>
+    </main>
+
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Leave Feedback</h2>
+            <div class="rating-container">
+                <div class="stars">
+                    <i class="far fa-star" data-rating="1"></i>
+                    <i class="far fa-star" data-rating="2"></i>
+                    <i class="far fa-star" data-rating="3"></i>
+                    <i class="far fa-star" data-rating="4"></i>
+                    <i class="far fa-star" data-rating="5"></i>
+                </div>
+                <input type="hidden" id="ratingValue" value="0">
+            </div>
+            <textarea id="feedbackText" placeholder="Share your experience with this user..."></textarea>
+            <button id="submitFeedback" class="btn">Submit Feedback</button>
+        </div>
+    </div>
+
+    <script src="js/requests.js"></script>
+</body>
+</html>
